@@ -21,7 +21,7 @@ public class MovingCube : MonoBehaviour
     {
         if (GameManager.instance.isClickedToRun)
         {
-            if (GameManager.instance.isLeftRight)
+            if (GameManager.instance.isLeftRightX)
             {
                 transform.position = new Vector3(Mathf.PingPong(Time.time * speed, right - left) + left, transform.position.y, transform.position.z);
             }

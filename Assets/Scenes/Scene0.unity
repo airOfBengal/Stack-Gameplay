@@ -463,7 +463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &784658976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +833,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Moving Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 2596920842408741326, guid: cbac433fa2237ab41a46de9108b41c36, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbac433fa2237ab41a46de9108b41c36, type: 3}
 --- !u!1 &1548414259
@@ -900,7 +904,8 @@ MonoBehaviour:
   zRight: {fileID: 873288581}
   movingCube: {fileID: 784658975}
   baseCube: {fileID: 1896672687}
-  isLeftRight: 0
+  isLeftRightX: 0
+  isClickedToRun: 0
 --- !u!4 &1559606988
 Transform:
   m_ObjectHideFlags: 0

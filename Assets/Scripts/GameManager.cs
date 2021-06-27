@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject movingCube;
     [SerializeField] GameObject baseCube;
 
-    public bool isLeftRight = false;
+    public bool isLeftRightX = false;
     public bool isClickedToRun = false;
 
     private void Awake()
@@ -41,11 +41,20 @@ public class GameManager : MonoBehaviour
     }
 
     public void SetMovingCube()
-    {
-        isClickedToRun = true;
-        isLeftRight = !isLeftRight;
+    {        
+        if (isClickedToRun && IsOverlapped())
+        {
+            Debug.Log("overlapped");
+        }
+        else
+        {
+            Debug.Log("not overlapped");
+        }
 
-        if (isLeftRight)
+        isClickedToRun = true;
+        isLeftRightX = !isLeftRightX;
+
+        if (isLeftRightX)
         {
             movingCube.transform.localScale = baseCube.transform.localScale;
             movingCube.GetComponent<MovingCube>().left = xLeft.position.x;
@@ -62,5 +71,41 @@ public class GameManager : MonoBehaviour
             movingCube.transform.position = new Vector3(baseCube.transform.position.x, y, zLeft.position.z);
         }
 
+        movingCube.SetActive(true);
+    }
+
+    bool IsOverlapped()
+    {
+        if (isLeftRightX)
+        {
+            float xMin = baseCube.transform.position.x - baseCube.transform.localScale.x/2;
+            float xMax = baseCube.transform.position.x + baseCube.transform.localScale.x/2;
+            float xLeft = movingCube.transform.position.x - movingCube.transform.localScale.x/2;
+            float xRight = movingCube.transform.position.x + movingCube.transform.localScale.x/2;
+            Debug.Log("xMin: " + xMin + " xMax: " + xMax + " xLeft: " + xLeft + " xRight: " + xRight);
+            if((xLeft > xMin && xLeft < xMax) || (xRight > xMin && xRight < xMax))
+            {
+                return true;
+            }
+        }
+        else
+        {
+            float zMin = baseCube.transform.position.z - baseCube.transform.localScale.z/2;
+            float zMax = baseCube.transform.position.z + baseCube.transform.localScale.z/2;
+            float zLeft = movingCube.transform.position.z - movingCube.transform.localScale.z/2;
+            float zRight = movingCube.transform.position.z + movingCube.transform.localScale.z/2;
+            Debug.Log("zMin: " + zMin + " zMax: " + zMax + " zLeft: " + zLeft + " zRight: " + zRight);
+            if ((zLeft > zMin && zLeft < zMax) || (zRight > zMin && zRight < zMax))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    bool IsPerfectlyOverlapped()
+    {
+        return false;
     }
 }
