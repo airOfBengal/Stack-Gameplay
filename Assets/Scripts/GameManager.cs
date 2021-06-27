@@ -174,7 +174,19 @@ public class GameManager : MonoBehaviour
             }
             else if(xRight < xMax)
             {
+                float xDist = Mathf.Abs(baseCube.transform.position.x - movingCube.transform.position.x);
+                float newBaseCubeXScale = movingCube.transform.localScale.x - xDist;
+                float newTruncatedCubeXScale = xDist;
+                float newBaseCubeXPos = movingCube.transform.position.x + xDist / 2;
+                float newTruncatedCubeXPos = movingCube.transform.position.x - xDist;
 
+                GameObject newBaseCube = Instantiate(prefabCube, new Vector3(newBaseCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
+                newBaseCube.transform.localScale = new Vector3(newBaseCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
+                newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                GameObject truncatedCube = Instantiate(prefabCube, new Vector3(newTruncatedCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
+                truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
+
+                baseCube = newBaseCube;
             }
         }
         else
@@ -197,7 +209,19 @@ public class GameManager : MonoBehaviour
             }
             else if(zRight < zMax)
             {
+                float zDist = Mathf.Abs(baseCube.transform.position.z - movingCube.transform.position.z);
+                float newBaseCubeZScale = movingCube.transform.localScale.z - zDist;
+                float newTruncatedCubeZScale = zDist;
+                float newBaseCubeZPos = movingCube.transform.position.z + zDist / 2;
+                float newTruncatedCubeZPos = movingCube.transform.position.z - zDist;
 
+                GameObject newBaseCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newBaseCubeZPos), Quaternion.identity);
+                newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newBaseCubeZScale);
+                newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                GameObject truncatedCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newTruncatedCubeZPos), Quaternion.identity);
+                truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
+
+                baseCube = newBaseCube;
             }
         }
     }
