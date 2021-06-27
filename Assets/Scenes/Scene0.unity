@@ -898,12 +898,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d02f053504f051a499c73e6f3cb6de21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xLeft: {fileID: 1548414260}
-  xRight: {fileID: 1797707348}
-  zLeft: {fileID: 190653587}
-  zRight: {fileID: 873288581}
+  xLeftTerminal: {fileID: 1548414260}
+  xRightTerminal: {fileID: 1797707348}
+  zLeftTerminal: {fileID: 190653587}
+  zRightTerminal: {fileID: 873288581}
   movingCube: {fileID: 784658975}
   baseCube: {fileID: 1896672687}
+  prefabCube: {fileID: 8730195347307011066, guid: b4ef9e98cfdb70a48bc296f88579fff0, type: 3}
   perfectionThreshold: 0.05
   isLeftRightX: 0
   isClickedToRun: 0
