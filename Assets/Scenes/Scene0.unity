@@ -904,6 +904,7 @@ MonoBehaviour:
   zRight: {fileID: 873288581}
   movingCube: {fileID: 784658975}
   baseCube: {fileID: 1896672687}
+  perfectionThreshold: 0.05
   isLeftRightX: 0
   isClickedToRun: 0
 --- !u!4 &1559606988
