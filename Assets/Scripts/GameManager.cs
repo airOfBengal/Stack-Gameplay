@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject stackTitleText;
     [SerializeField] GameObject tapTitleText;
+    [SerializeField] AudioClip cutSfx;
 
     public volatile bool isLeftRightX = false;
     public volatile bool isClickedToRun = false;
@@ -33,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     Color color = Color.white;
     int score = 0;
+
+    AudioSource audioSource;
 
     private void Awake()
     {
@@ -52,6 +55,8 @@ public class GameManager : MonoBehaviour
         color = ColorManager.instance.GetNextColor();
         Debug.Log("cube color: " + color);
         baseCube.GetComponent<Renderer>().material.color = color;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -76,7 +81,7 @@ public class GameManager : MonoBehaviour
                 {
                     Debug.Log("overlapped");
                     CreateNewCubes();
-                    // TODO: play tone
+                    audioSource.PlayOneShot(cutSfx);
                 }
 
                 score++;
