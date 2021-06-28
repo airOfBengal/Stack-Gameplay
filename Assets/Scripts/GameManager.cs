@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     float xMin, xMax, zMin, zMax;
     float xLeft, xRight, zLeft, zRight;
 
+    Color color = Color.white;
+
     private void Awake()
     {
         if(GameManager.instance == null)
@@ -39,8 +42,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+        color = ColorManager.instance.GetNextColor();
+        Debug.Log("cube color: " + color);
+        baseCube.GetComponent<Renderer>().material.color = color;
     }
 
     // Update is called once per frame
@@ -68,7 +72,8 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("not overlapped");
+                Debug.Log("not overlapped, game over");
+                SceneManager.LoadScene(0);
             }
         }
        
@@ -93,6 +98,9 @@ public class GameManager : MonoBehaviour
             movingCube.transform.position = new Vector3(baseCube.transform.position.x, y, zLeftTerminal.position.z);
         }
 
+        color = ColorManager.instance.GetNextColor();
+        Debug.Log("moving  cube color: " + color);
+        movingCube.GetComponent<Renderer>().material.color = color;
         movingCube.SetActive(true);
     }
 
@@ -104,7 +112,7 @@ public class GameManager : MonoBehaviour
             xMax = baseCube.transform.position.x + baseCube.transform.localScale.x/2;
             xLeft = movingCube.transform.position.x - movingCube.transform.localScale.x/2;
             xRight = movingCube.transform.position.x + movingCube.transform.localScale.x/2;
-            Debug.Log("xMin: " + xMin + " xMax: " + xMax + " xLeft: " + xLeft + " xRight: " + xRight);
+            //Debug.Log("xMin: " + xMin + " xMax: " + xMax + " xLeft: " + xLeft + " xRight: " + xRight);
             if((xLeft >= xMin && xLeft <= xMax) || (xRight >= xMin && xRight <= xMax))
             {
                 return true;
@@ -116,7 +124,7 @@ public class GameManager : MonoBehaviour
             zMax = baseCube.transform.position.z + baseCube.transform.localScale.z/2;
             zLeft = movingCube.transform.position.z - movingCube.transform.localScale.z/2;
             zRight = movingCube.transform.position.z + movingCube.transform.localScale.z/2;
-            Debug.Log("zMin: " + zMin + " zMax: " + zMax + " zLeft: " + zLeft + " zRight: " + zRight);
+            //Debug.Log("zMin: " + zMin + " zMax: " + zMax + " zLeft: " + zLeft + " zRight: " + zRight);
             if ((zLeft >= zMin && zLeft <= zMax) || (zRight >= zMin && zRight <= zMax))
             {
                 return true;
@@ -170,10 +178,12 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(newBaseCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(newBaseCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                newBaseCube.GetComponent<Renderer>().material.color = color;
 
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(newTruncatedCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 truncatedCube.tag = "DroppingCube";
+                truncatedCube.GetComponent<Renderer>().material.color = color;
 
                 newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
@@ -189,10 +199,12 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(newBaseCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(newBaseCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                newBaseCube.GetComponent<Renderer>().material.color = color;
 
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(newTruncatedCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 truncatedCube.tag = "DroppingCube";
+                truncatedCube.GetComponent<Renderer>().material.color = color;
 
                 newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
@@ -211,10 +223,12 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newBaseCubeZPos), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newBaseCubeZScale);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                newBaseCube.GetComponent<Renderer>().material.color = color;
 
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newTruncatedCubeZPos), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
                 truncatedCube.tag = "DroppingCube";
+                truncatedCube.GetComponent<Renderer>().material.color = color;
 
                 newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
@@ -230,10 +244,12 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newBaseCubeZPos), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newBaseCubeZScale);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+                newBaseCube.GetComponent<Renderer>().material.color = color;
 
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newTruncatedCubeZPos), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
                 truncatedCube.tag = "DroppingCube";
+                truncatedCube.GetComponent<Renderer>().material.color = color;
 
                 newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
