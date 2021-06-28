@@ -759,13 +759,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.14071962, y: 0.36545736, z: -0.055994827, w: 0.9184245}
-  m_LocalPosition: {x: -6.68, y: 5.99, z: -6.82}
+  m_LocalRotation: {x: 0.25519848, y: 0.35550314, z: -0.10154799, w: 0.8934088}
+  m_LocalPosition: {x: -2.88, y: 6.26, z: -2.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 17.422, y: 43.397, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.884, y: 43.397, z: 0}
 --- !u!1 &1387590170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +1002,7 @@ MonoBehaviour:
   prefabCube: {fileID: 8730195347307011066, guid: b4ef9e98cfdb70a48bc296f88579fff0, type: 3}
   perfectionThreshold: 0.05
   stack: {fileID: 1596015328}
-  counterForStackShifting: 3
+  counterForStackShifting: 5
   isLeftRightX: 0
   isClickedToRun: 0
 --- !u!4 &1559606988
