@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MovingCube : MonoBehaviour
 {
-    [SerializeField] float speed = 2f;
+    public float speed = 2f;
 
     public float left { get; set; }
     public float right { get; set; }
@@ -19,7 +19,7 @@ public class MovingCube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.isClickedToRun)
+        if (GameManager.instance.isClickedToRun && !GameManager.instance.isGameOver)
         {
             if (GameManager.instance.isLeftRightX)
             {

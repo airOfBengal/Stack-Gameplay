@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,8 +20,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject stack;
     [SerializeField] int counterForStackShifting = 3;
 
-    public bool isLeftRightX = false;
-    public bool isClickedToRun = false;
+    public volatile bool isLeftRightX = false;
+    public volatile bool isClickedToRun = false;
+    public volatile bool isGameOver = false;
 
     float xMin, xMax, zMin, zMax;
     float xLeft, xRight, zLeft, zRight;
@@ -58,50 +60,70 @@ public class GameManager : MonoBehaviour
         if (isClickedToRun)
         {
             if (IsOverlapped())
-            {
-                
+            {                
                 if (IsPerfectlyOverlapped())
                 {
                     Debug.Log("perfectly overlapped");
+                    CreatePerfectCube();
+                    // TODO: play tone & animation
                 }
                 else
                 {
                     Debug.Log("overlapped");
                     CreateNewCubes();
+                    // TODO: play tone
                 }
             }
             else
             {
-                Debug.Log("not overlapped, game over");
-                SceneManager.LoadScene(0);
+                isGameOver = true;
+                StartCoroutine(WaitToGameOver());
+                // TODO: play game over tone, wait a second, reload scene
             }
         }
-       
 
-        isClickedToRun = true;
-        isLeftRightX = !isLeftRightX;
 
-        if (isLeftRightX)
+        if (!isGameOver)
         {
-            movingCube.transform.localScale = baseCube.transform.localScale;
-            movingCube.GetComponent<MovingCube>().left = xLeftTerminal.position.x;
-            movingCube.GetComponent<MovingCube>().right = xRightTerminal.position.x;
-            float y = baseCube.transform.position.y + baseCube.transform.localScale.y / 2 + movingCube.transform.localScale.y / 2;
-            movingCube.transform.position = new Vector3(xLeftTerminal.position.x, y, baseCube.transform.position.z);            
-        }
-        else
-        {
-            movingCube.transform.localScale = baseCube.transform.localScale;
-            movingCube.GetComponent<MovingCube>().left = zLeftTerminal.position.z;
-            movingCube.GetComponent<MovingCube>().right = zRightTerminal.position.z;
-            float y = baseCube.transform.position.y + baseCube.transform.localScale.y / 2 + movingCube.transform.localScale.y / 2;
-            movingCube.transform.position = new Vector3(baseCube.transform.position.x, y, zLeftTerminal.position.z);
-        }
+            isClickedToRun = true;
+            isLeftRightX = !isLeftRightX;
 
-        color = ColorManager.instance.GetNextColor();
-        Debug.Log("moving  cube color: " + color);
-        movingCube.GetComponent<Renderer>().material.color = color;
-        movingCube.SetActive(true);
+            if (isLeftRightX)
+            {
+                movingCube.transform.localScale = baseCube.transform.localScale;
+                movingCube.GetComponent<MovingCube>().left = xLeftTerminal.position.x;
+                movingCube.GetComponent<MovingCube>().right = xRightTerminal.position.x;
+                float y = baseCube.transform.position.y + baseCube.transform.localScale.y / 2 + movingCube.transform.localScale.y / 2;
+                movingCube.transform.position = new Vector3(xLeftTerminal.position.x, y, baseCube.transform.position.z);
+            }
+            else
+            {
+                movingCube.transform.localScale = baseCube.transform.localScale;
+                movingCube.GetComponent<MovingCube>().left = zLeftTerminal.position.z;
+                movingCube.GetComponent<MovingCube>().right = zRightTerminal.position.z;
+                float y = baseCube.transform.position.y + baseCube.transform.localScale.y / 2 + movingCube.transform.localScale.y / 2;
+                movingCube.transform.position = new Vector3(baseCube.transform.position.x, y, zLeftTerminal.position.z);
+            }
+
+            color = ColorManager.instance.GetNextColor();
+            Debug.Log("moving  cube color: " + color);
+            movingCube.GetComponent<Renderer>().material.color = color;
+            movingCube.SetActive(true);
+        }
+    }
+
+    private IEnumerator WaitToGameOver()
+    {
+        Debug.Log("not overlapped, game over");
+
+        movingCube.GetComponent<MovingCube>().speed = 0f;
+        movingCube.GetComponent<Rigidbody>().isKinematic = false;
+        movingCube.GetComponent<Rigidbody>().useGravity = true;
+        movingCube.transform.position = movingCube.transform.position;
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(0);
     }
 
     bool IsOverlapped()
@@ -112,7 +134,7 @@ public class GameManager : MonoBehaviour
             xMax = baseCube.transform.position.x + baseCube.transform.localScale.x/2;
             xLeft = movingCube.transform.position.x - movingCube.transform.localScale.x/2;
             xRight = movingCube.transform.position.x + movingCube.transform.localScale.x/2;
-            //Debug.Log("xMin: " + xMin + " xMax: " + xMax + " xLeft: " + xLeft + " xRight: " + xRight);
+            
             if((xLeft >= xMin && xLeft <= xMax) || (xRight >= xMin && xRight <= xMax))
             {
                 return true;
@@ -124,7 +146,7 @@ public class GameManager : MonoBehaviour
             zMax = baseCube.transform.position.z + baseCube.transform.localScale.z/2;
             zLeft = movingCube.transform.position.z - movingCube.transform.localScale.z/2;
             zRight = movingCube.transform.position.z + movingCube.transform.localScale.z/2;
-            //Debug.Log("zMin: " + zMin + " zMax: " + zMax + " zLeft: " + zLeft + " zRight: " + zRight);
+            
             if ((zLeft >= zMin && zLeft <= zMax) || (zRight >= zMin && zRight <= zMax))
             {
                 return true;
@@ -138,11 +160,6 @@ public class GameManager : MonoBehaviour
     {
         if (isLeftRightX)
         {
-            //float xMin = baseCube.transform.position.x - baseCube.transform.localScale.x / 2;
-            //float xMax = baseCube.transform.position.x + baseCube.transform.localScale.x / 2;
-            //float xLeft = movingCube.transform.position.x - movingCube.transform.localScale.x / 2;
-            //float xRight = movingCube.transform.position.x + movingCube.transform.localScale.x / 2;
-            //Debug.Log("xMin: " + xMin + " xMax: " + xMax + " xLeft: " + xLeft + " xRight: " + xRight);
             if(Mathf.Abs(xMin - xLeft) <= perfectionThreshold)
             {
                 return true;
@@ -150,11 +167,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //float zMin = baseCube.transform.position.z - baseCube.transform.localScale.z / 2;
-            //float zMax = baseCube.transform.position.z + baseCube.transform.localScale.z / 2;
-            //float zLeft = movingCube.transform.position.z - movingCube.transform.localScale.z / 2;
-            //float zRight = movingCube.transform.position.z + movingCube.transform.localScale.z / 2;
-            //Debug.Log("zMin: " + zMin + " zMax: " + zMax + " zLeft: " + zLeft + " zRight: " + zRight);
             if(Mathf.Abs(zMin - zLeft) <= perfectionThreshold)
             {
                 return true;
@@ -264,5 +276,16 @@ public class GameManager : MonoBehaviour
         {
             counterForStackShifting--;
         }
+    }
+
+    private void CreatePerfectCube()
+    {
+        GameObject newBaseCube = Instantiate(prefabCube, movingCube.transform.position, Quaternion.identity);
+        newBaseCube.transform.localScale = movingCube.transform.localScale;
+        newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+        newBaseCube.GetComponent<Renderer>().material.color = color;
+
+        newBaseCube.transform.parent = baseCube.transform.parent;
+        baseCube = newBaseCube;
     }
 }
