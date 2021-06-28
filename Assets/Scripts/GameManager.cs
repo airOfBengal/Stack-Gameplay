@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject stack;
     [SerializeField] int counterForStackShifting = 3;
 
+    [SerializeField] GameObject stackTitleText;
+    [SerializeField] GameObject tapTitleText;
+
     public volatile bool isLeftRightX = false;
     public volatile bool isClickedToRun = false;
     public volatile bool isGameOver = false;
@@ -28,6 +32,7 @@ public class GameManager : MonoBehaviour
     float xLeft, xRight, zLeft, zRight;
 
     Color color = Color.white;
+    int score = 0;
 
     private void Awake()
     {
@@ -73,6 +78,8 @@ public class GameManager : MonoBehaviour
                     CreateNewCubes();
                     // TODO: play tone
                 }
+
+                score++;
             }
             else
             {
@@ -109,6 +116,12 @@ public class GameManager : MonoBehaviour
             Debug.Log("moving  cube color: " + color);
             movingCube.GetComponent<Renderer>().material.color = color;
             movingCube.SetActive(true);
+        }
+
+        if (isClickedToRun)
+        {
+            tapTitleText.SetActive(false);
+            stackTitleText.GetComponent<Text>().text = score == 0 ? "" : "" + score;
         }
     }
 
