@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] float perfectionThreshold = 0.05f;
 
+    [SerializeField] GameObject stack;
+    [SerializeField] int counterForStackShifting = 3;
+
     public bool isLeftRightX = false;
     public bool isClickedToRun = false;
 
@@ -172,6 +175,7 @@ public class GameManager : MonoBehaviour
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 truncatedCube.tag = "DroppingCube";
 
+                newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
             }
             else if(xRight < xMax)
@@ -190,6 +194,7 @@ public class GameManager : MonoBehaviour
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 truncatedCube.tag = "DroppingCube";
 
+                newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
             }
         }
@@ -211,6 +216,7 @@ public class GameManager : MonoBehaviour
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
                 truncatedCube.tag = "DroppingCube";
 
+                newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
             }
             else if(zRight < zMax)
@@ -229,8 +235,18 @@ public class GameManager : MonoBehaviour
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
                 truncatedCube.tag = "DroppingCube";
 
+                newBaseCube.transform.parent = baseCube.transform.parent;
                 baseCube = newBaseCube;
             }
+        }
+
+        if(counterForStackShifting == 0)
+        {
+            stack.transform.position = new Vector3(stack.transform.position.x, stack.transform.position.y - baseCube.transform.localScale.y, stack.transform.position.z);
+        }
+        else
+        {
+            counterForStackShifting--;
         }
     }
 }

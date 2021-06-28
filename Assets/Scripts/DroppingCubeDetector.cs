@@ -8,7 +8,6 @@ public class DroppingCubeDetector : MonoBehaviour
     {
         if(other.tag == "DroppingCube")
         {
-            Debug.Log("dropping cube touched");
             Destroy(other.gameObject);
         }
     }

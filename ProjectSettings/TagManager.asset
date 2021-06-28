@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Dropping Cube
+  - DroppingCube
   layers:
   - Default
   - TransparentFX
