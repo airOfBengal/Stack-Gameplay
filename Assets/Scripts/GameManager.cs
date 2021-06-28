@@ -167,8 +167,10 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(newBaseCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(newBaseCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(newTruncatedCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
+                truncatedCube.tag = "DroppingCube";
 
                 baseCube = newBaseCube;
             }
@@ -183,8 +185,10 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(newBaseCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(newBaseCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(newTruncatedCubeXPos, movingCube.transform.position.y, movingCube.transform.position.z), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(newTruncatedCubeXScale, movingCube.transform.localScale.y, movingCube.transform.localScale.z);
+                truncatedCube.tag = "DroppingCube";
 
                 baseCube = newBaseCube;
             }
@@ -202,8 +206,10 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newBaseCubeZPos), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newBaseCubeZScale);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newTruncatedCubeZPos), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
+                truncatedCube.tag = "DroppingCube";
 
                 baseCube = newBaseCube;
             }
@@ -218,8 +224,10 @@ public class GameManager : MonoBehaviour
                 GameObject newBaseCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newBaseCubeZPos), Quaternion.identity);
                 newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newBaseCubeZScale);
                 newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
+
                 GameObject truncatedCube = Instantiate(prefabCube, new Vector3(movingCube.transform.position.x, movingCube.transform.position.y, newTruncatedCubeZPos), Quaternion.identity);
                 truncatedCube.transform.localScale = new Vector3(movingCube.transform.localScale.x, movingCube.transform.localScale.y, newTruncatedCubeZScale);
+                truncatedCube.tag = "DroppingCube";
 
                 baseCube = newBaseCube;
             }
