@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject startScreen;
     [SerializeField] GameObject clickPanel;
     [SerializeField] AudioClip[] perfectionSfxs;
+    [SerializeField] AudioClip dropLargerCubeSfx;
 
     public volatile bool isLeftRightX = false;
     public volatile bool isClickedToRun = false;
@@ -92,16 +93,12 @@ public class GameManager : MonoBehaviour
                     }
                     else
                     {
-                        audioSource.PlayOneShot(perfectionSfxs[6]);
+                        audioSource.PlayOneShot(dropLargerCubeSfx);
                         if(perfectionCount == 8)
                         {
                             CreatePerfectCube(1.1f);
                         }
-                        else
-                        {
-                            CreatePerfectCube(1f);
-                        }
-                        
+                        perfectionCount = 0;                        
                     }
                     
                 }

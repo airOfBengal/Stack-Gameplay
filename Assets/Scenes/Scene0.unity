@@ -1443,6 +1443,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ffc6029a2b5fb8541a7b0d6c74f52816, type: 3}
   - {fileID: 8300000, guid: 886b3f64652adf04d9c646e501f49eb4, type: 3}
   - {fileID: 8300000, guid: 93290c28b7eea6445968045912a22690, type: 3}
+  dropLargerCubeSfx: {fileID: 8300000, guid: c178473b00c6a0141a6a8517d9c413ee, type: 3}
   isLeftRightX: 0
   isClickedToRun: 0
   isGameOver: 0
