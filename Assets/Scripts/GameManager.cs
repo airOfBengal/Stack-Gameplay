@@ -24,10 +24,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject stackTitleText;
     [SerializeField] GameObject tapTitleText;
     [SerializeField] AudioClip cutSfx;
+    [SerializeField] GameObject restartPanel;
+    [SerializeField] Text scoreText;
+    [SerializeField] GameObject bestScoreText;
+    [SerializeField] GameObject startScreen;
+    [SerializeField] GameObject clickPanel;
 
     public volatile bool isLeftRightX = false;
     public volatile bool isClickedToRun = false;
     public volatile bool isGameOver = false;
+    public volatile static bool isRestart = false;
 
     float xMin, xMax, zMin, zMax;
     float xLeft, xRight, zLeft, zRight;
@@ -57,12 +63,15 @@ public class GameManager : MonoBehaviour
         baseCube.GetComponent<Renderer>().material.color = color;
 
         audioSource = GetComponent<AudioSource>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
+        if (!isRestart)
+        {
+            startScreen.SetActive(true);
+        }
+        else
+        {
+            SetMovingCube();
+        }
     }
 
     public void SetMovingCube()
@@ -141,7 +150,40 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        SceneManager.LoadScene(0);
+        ShowRestartPanel();
+    }
+
+    private void ShowRestartPanel()
+    {
+        clickPanel.SetActive(false);
+        stackTitleText.GetComponent<Text>().text = "";
+        scoreText.text = "Score: " + score;
+        if (PlayerPrefs.HasKey("best_score"))
+        {
+            int bestScore = PlayerPrefs.GetInt("best_score");
+            if(score > bestScore)
+            {
+                PlayerPrefs.SetInt("best_score", score);
+                PlayerPrefs.Save();
+            }
+
+            bestScoreText.GetComponent<Text>().text = "Best Score: " + PlayerPrefs.GetInt("best_score");
+        }
+        else
+        {
+            bestScoreText.SetActive(false);
+            PlayerPrefs.SetInt("best_score", score);
+            PlayerPrefs.Save();
+        }
+
+        restartPanel.SetActive(true);
+
+        ZoomOut();
+    }
+
+    private void ZoomOut()
+    {
+        
     }
 
     bool IsOverlapped()
@@ -306,4 +348,11 @@ public class GameManager : MonoBehaviour
         newBaseCube.transform.parent = baseCube.transform.parent;
         baseCube = newBaseCube;
     }
+
+    public void Restart()
+    {
+        isRestart = true;
+        SceneManager.LoadScene(0);
+    }
+
 }
