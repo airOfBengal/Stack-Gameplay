@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject bestScoreText;
     [SerializeField] GameObject startScreen;
     [SerializeField] GameObject clickPanel;
+    [SerializeField] AudioClip[] perfectionSfxs;
 
     public volatile bool isLeftRightX = false;
     public volatile bool isClickedToRun = false;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
 
     Color color = Color.white;
     int score = 0;
+    int perfectionCount = 0;
 
     AudioSource audioSource;
 
@@ -82,21 +84,49 @@ public class GameManager : MonoBehaviour
             {                
                 if (IsPerfectlyOverlapped())
                 {
-                    Debug.Log("perfectly overlapped");
-                    CreatePerfectCube();
-                    // TODO: play tone & animation
+                    perfectionCount++;
+                    if(perfectionCount <= 7)
+                    {
+                        audioSource.PlayOneShot(perfectionSfxs[perfectionCount - 1]);
+                        CreatePerfectCube(1f);
+                    }
+                    else
+                    {
+                        audioSource.PlayOneShot(perfectionSfxs[6]);
+                        if(perfectionCount == 8)
+                        {
+                            CreatePerfectCube(1.1f);
+                        }
+                        else
+                        {
+                            CreatePerfectCube(1f);
+                        }
+                        
+                    }
+                    
                 }
                 else
                 {
                     Debug.Log("overlapped");
                     CreateNewCubes();
                     audioSource.PlayOneShot(cutSfx);
+                    perfectionCount = 0;
                 }
 
                 score++;
+
+                if (counterForStackShifting == 0)
+                {
+                    stack.transform.position = new Vector3(stack.transform.position.x, stack.transform.position.y - baseCube.transform.localScale.y, stack.transform.position.z);
+                }
+                else
+                {
+                    counterForStackShifting--;
+                }
             }
             else
             {
+                perfectionCount = 0;
                 isGameOver = true;
                 StartCoroutine(WaitToGameOver());
                 // TODO: play game over tone, wait a second, reload scene
@@ -327,21 +357,12 @@ public class GameManager : MonoBehaviour
                 baseCube = newBaseCube;
             }
         }
-
-        if(counterForStackShifting == 0)
-        {
-            stack.transform.position = new Vector3(stack.transform.position.x, stack.transform.position.y - baseCube.transform.localScale.y, stack.transform.position.z);
-        }
-        else
-        {
-            counterForStackShifting--;
-        }
     }
 
-    private void CreatePerfectCube()
+    private void CreatePerfectCube(float scale)
     {
         GameObject newBaseCube = Instantiate(prefabCube, movingCube.transform.position, Quaternion.identity);
-        newBaseCube.transform.localScale = movingCube.transform.localScale;
+        newBaseCube.transform.localScale = new Vector3(movingCube.transform.localScale.x * scale, movingCube.transform.localScale.y, movingCube.transform.localScale.z * scale);
         newBaseCube.GetComponent<Rigidbody>().isKinematic = true;
         newBaseCube.GetComponent<Renderer>().material.color = color;
 

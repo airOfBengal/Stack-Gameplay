@@ -1350,6 +1350,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2596920842408741327, guid: cbac433fa2237ab41a46de9108b41c36, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cbac433fa2237ab41a46de9108b41c36, type: 3}
 --- !u!1 &1548414259
@@ -1431,6 +1435,14 @@ MonoBehaviour:
   bestScoreText: {fileID: 1969214852}
   startScreen: {fileID: 1008310144}
   clickPanel: {fileID: 575442075}
+  perfectionSfxs:
+  - {fileID: 8300000, guid: b8b3c53ecf83ecc4bac0ae142299c28e, type: 3}
+  - {fileID: 8300000, guid: af41fb54bdceda444b307f12756bb351, type: 3}
+  - {fileID: 8300000, guid: ea447bddd6c53764e964a2ce3f0b9093, type: 3}
+  - {fileID: 8300000, guid: 67d75e1328e79f648b1838cfa0ee0307, type: 3}
+  - {fileID: 8300000, guid: ffc6029a2b5fb8541a7b0d6c74f52816, type: 3}
+  - {fileID: 8300000, guid: 886b3f64652adf04d9c646e501f49eb4, type: 3}
+  - {fileID: 8300000, guid: 93290c28b7eea6445968045912a22690, type: 3}
   isLeftRightX: 0
   isClickedToRun: 0
   isGameOver: 0
