@@ -1,0 +1,226 @@
+Authorized using stored user info.
+[ Warn ] $Failed to process  component on Base Cube (UnityEngine.GameObject)
+[ Warn ] $Looks like Base Cube collider on Base Cube game object was scaled, this might affect performance.
+[ Warn ] $Looks like Cube collider on Cube game object was scaled, this might affect performance.
+[ Warn ] $Converting Assets/Sprites/musicOn.png texture. Change its format from ETC2_RGBA8 to "RGBA 32 bit" to speed up export
+[ Warn ] $Non-repeat wrap mode used on 'musicOn' texture at 'Assets/Sprites/musicOn.png' with non power-of-two dimensions, this might not be rendered correctly.
+[ Warn ] $Converting Assets/Sprites/musicOff.png texture. Change its format from ETC2_RGBA8 to "RGBA 32 bit" to speed up export
+[ Warn ] $Non-repeat wrap mode used on 'musicOff' texture at 'Assets/Sprites/musicOff.png' with non power-of-two dimensions, this might not be rendered correctly.
+[ Warn ] $Converting Assets/Sprites/gear.png texture. Change its format from ETC2_RGBA8 to "RGBA 32 bit" to speed up export
+[ Warn ] $Non-repeat wrap mode used on 'gear' texture at 'Assets/Sprites/gear.png' with non power-of-two dimensions, this might not be rendered correctly.
+[ Warn ] $Converting Assets/Sprites/cross.png texture. Change its format from ETC2_RGBA8 to "RGBA 32 bit" to speed up export
+[ Warn ] $Non-repeat wrap mode used on 'cross' texture at 'Assets/Sprites/cross.png' with non power-of-two dimensions, this might not be rendered correctly.
+[ Warn ] $Looks like Dropping Cube Detector collider on Dropping Cube Detector game object was scaled, this might affect performance.
+Exporting assets from Unity.........
+[ Stage1 ] Assets exported from Unity and staged for further processing
+Using C:/Windows/Fonts/arial.ttf file to generate an atlas for Arial[466] font
+  Using alphabet  §1234567890-=qwertyuiop[]asdfghjkl;'\`zxcvbnm,./±!@#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:"|~ZXCVBNM<>?
+Combined 97 glyphs into bitmap texture at F:/UnityProjects/Stack Gameplay/LunaTemp/stage1/tmp/fonts/Arial-466/output_0.png (59kb)
+Resources:
+{}
+[ Stage2 ] Assets postprocessed and bundled successfully
+Microsoft (R) Build Engine version 16.7.0+b89cb5fde for .NET Framework
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+
+Build started 21/07/06 3:28:50 PM.
+
+Project "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" on node 1 (Rebuild target(s)).
+
+CoreClean:
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.pdb".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UI.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csprojAssemblyReference.cache".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CoreCompileInputs.cache".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CopyComplete".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.dll".
+
+  Deleting file "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.pdb".
+
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+
+CoreCompile:
+
+  C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;UNITY_BUPC;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2017_1_OR_NEWER /highentropyva+ /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.11-luna\lib\net40\Bridge.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\DOTween.1.2.235\lib\net40\DOTween.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.0\TextMeshPro.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /ruleset:"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Team Tools\Static Analysis Tools\\Rule Sets\MinimumRecommendedRules.ruleset" /subsystemversion:6.00 /target:library /utf8output /langversion:7 "F:\UnityProjects\Stack Gameplay\Assets\Scripts\ColorManager.cs" "F:\UnityProjects\Stack Gameplay\Assets\Scripts\DroppingCubeDetector.cs" "F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs" "F:\UnityProjects\Stack Gameplay\Assets\Scripts\MovingCube.cs" "F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs" Properties/AssemblyInfo.cs Sources/OtherDummyScript.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+
+  Using shared compilation with compiler from directory: C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Roslyn
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(10,29): warning CS0649: Field 'Settings.musicOnImage' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(27,33): warning CS0649: Field 'GameManager.restartPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(32,34): warning CS0649: Field 'GameManager.perfectionSfxs' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(21,33): warning CS0649: Field 'GameManager.stack' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(25,33): warning CS0649: Field 'GameManager.tapTitleText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(12,32): warning CS0649: Field 'GameManager.xRightTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(12,29): warning CS0649: Field 'Settings.musicOnOffButton' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(9,33): warning CS0649: Field 'Settings.settingsPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(30,33): warning CS0649: Field 'GameManager.startScreen' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(26,32): warning CS0649: Field 'GameManager.cutSfx' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(13,32): warning CS0649: Field 'GameManager.zLeftTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(31,33): warning CS0649: Field 'GameManager.clickPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(17,33): warning CS0649: Field 'GameManager.prefabCube' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(24,33): warning CS0649: Field 'GameManager.stackTitleText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(28,27): warning CS0649: Field 'GameManager.scoreText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(11,29): warning CS0649: Field 'Settings.musicOffImage' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(14,32): warning CS0649: Field 'GameManager.zRightTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(29,33): warning CS0649: Field 'GameManager.bestScoreText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(33,32): warning CS0649: Field 'GameManager.dropLargerCubeSfx' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(15,33): warning CS0649: Field 'GameManager.movingCube' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(11,32): warning CS0649: Field 'GameManager.xLeftTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+_CopyFilesMarkedCopyLocal:
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll".
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\DOTween.1.2.235\lib\net40\DOTween.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.11-luna\lib\net40\Bridge.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.0\TextMeshPro.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.11-luna\lib\net40\Bridge.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UI.dll".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.xml".
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.xml" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml".
+
+  Creating "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CopyComplete" because "AlwaysCreate" was specified.
+
+CopyFilesToOutputDirectory:
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.dll" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll".
+
+  Scripts -> C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll
+
+  Copying file from "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\obj\Debug\UnityScriptsCompiler.pdb" to "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.pdb".
+
+BridgeNetCompilerTask:
+  Bridge started
+
+      To enable detailed logging, configure "logging" in bridge.json.
+
+      https://github.com/bridgedotnet/Bridge/wiki/global-configuration#logging
+
+  Bridge done
+
+Done Building Project "C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (Rebuild target(s)).
+
+
+Build succeeded.
+
+
+
+"C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (Rebuild target) (1) ->
+(CoreCompile target) -> 
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(10,29): warning CS0649: Field 'Settings.musicOnImage' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(27,33): warning CS0649: Field 'GameManager.restartPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(32,34): warning CS0649: Field 'GameManager.perfectionSfxs' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(21,33): warning CS0649: Field 'GameManager.stack' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(25,33): warning CS0649: Field 'GameManager.tapTitleText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(12,32): warning CS0649: Field 'GameManager.xRightTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(12,29): warning CS0649: Field 'Settings.musicOnOffButton' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(9,33): warning CS0649: Field 'Settings.settingsPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(30,33): warning CS0649: Field 'GameManager.startScreen' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(26,32): warning CS0649: Field 'GameManager.cutSfx' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(13,32): warning CS0649: Field 'GameManager.zLeftTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(31,33): warning CS0649: Field 'GameManager.clickPanel' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(17,33): warning CS0649: Field 'GameManager.prefabCube' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(24,33): warning CS0649: Field 'GameManager.stackTitleText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(28,27): warning CS0649: Field 'GameManager.scoreText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\Settings.cs(11,29): warning CS0649: Field 'Settings.musicOffImage' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(14,32): warning CS0649: Field 'GameManager.zRightTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(29,33): warning CS0649: Field 'GameManager.bestScoreText' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(33,32): warning CS0649: Field 'GameManager.dropLargerCubeSfx' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(15,33): warning CS0649: Field 'GameManager.movingCube' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+  F:\UnityProjects\Stack Gameplay\Assets\Scripts\GameManager.cs(11,32): warning CS0649: Field 'GameManager.xLeftTerminal' is never assigned to, and will always have its default value null [C:\Users\ASUS\Downloads\1.13.0\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+
+    21 Warning(s)
+    0 Error(s)
+
+
+Time Elapsed 00:00:08.08
+
+Source code compiled successfully!
+[ Stage3 ] Code compiled and bundled successfully.
+[ Stage4 ] Target platform: develop
+[ Stage4 ] Package bundled successfully
